@@ -1,0 +1,14 @@
+<header>
+  <div class="content">
+    <img src="https://surrealdb.com/static/img/logo-2232dc8d2a09e077d26daeca5e2b5cb9.svg"/>
+    <h2>Proof of concept</h2>
+  </div>
+</header>
+<div class="navigation">
+  <div class="navigation__item" *ngFor="let item of tabs">
+    <a [class.active]="item.route === activeLink" routerLink="{{item.route}}">{{item.title}}</a>
+  </div>
+</div>
+<div class="outlet">
+  <router-outlet></router-outlet>
+</div>
