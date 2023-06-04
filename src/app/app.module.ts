@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app.routing.module';
 import { AppComponent } from './_smart-components/app-component/app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {RouterModule} from '@angular/router';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent],
@@ -11,7 +13,9 @@ import {RouterModule} from '@angular/router';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    MatSnackBarModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent]
 })

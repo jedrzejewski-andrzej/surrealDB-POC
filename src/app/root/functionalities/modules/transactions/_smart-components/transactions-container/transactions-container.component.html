@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="session">
+    <div class="header">Sesja A</div>
+    <div class="command" *ngFor="let command of sessionA">
+      <pre>{{command}}</pre>
+      <img [cdkCopyToClipboard]="command" (click)="openSnackBar()" src="assets/images/content_copy.svg"/>
+    </div>
+  </div>
+  
+  <div class="session">
+    <div class="header">Sesja B</div>
+    <div class="command" *ngFor="let command of sessionB">
+      <pre>{{command}}</pre>
+      <img [cdkCopyToClipboard]="command" (click)="openSnackBar()" src="assets/images/content_copy.svg"/>
+    </div>
+  </div>
+</div>

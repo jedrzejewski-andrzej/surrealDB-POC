@@ -13,12 +13,16 @@ const routes: Routes = [
         path: 'crud',
         loadChildren: () => import('./modules/crud/crud.module').then(m => m.CrudModule),
       },
+      {
+        path: 'transactions',
+        loadChildren: () => import('./modules/transactions/transactions.module').then(m => m.TransactionsModule),
+      },
+      {
+        path: '**',
+        redirectTo: 'crud',
+      }
     ]
   },
-  {
-    path: '**',
-    redirectTo: '/crud/create',
-  }
 ];
 
 @NgModule({

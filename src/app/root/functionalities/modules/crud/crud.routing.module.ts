@@ -27,12 +27,12 @@ const routes: Routes = [
         path: 'delete',
         component: DeleteContainerComponent
       },
+      {
+        path: '**',
+        redirectTo: 'create'
+      }
     ]
   },
-  {
-    path: '**',
-    redirectTo: 'create'
-  }
 ];
 
 @NgModule({
