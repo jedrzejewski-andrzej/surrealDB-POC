@@ -11,7 +11,6 @@ import {FormControl} from '@angular/forms';
 export class ReadContainerComponent implements OnInit, OnDestroy {
   surrealObj$: Observable<any>;
   surrealObjSingle$: Observable<any>;
-  sqlObj$: Observable<any>;
   
   idControl = new FormControl(6);
   
@@ -20,7 +19,6 @@ export class ReadContainerComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.surrealObj$ = this._readService.surrealObj$;
     this.surrealObjSingle$ = this._readService.surrealObjSingle$;
-    this.sqlObj$ = this._readService.sqlObj$;
   }
   
   readOnSurrealAll(): void {

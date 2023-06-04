@@ -9,7 +9,7 @@ export class CreateService extends AbstractService {
   }
   
   createOnSurreal(): void {
-    const id = this.generateRandomInt(1000);
+    const id = CreateService.generateRandomInt(1000);
     const user = {
       email: `test${id}@example.pl`,
       name: `SurrealDB-${id}`
@@ -26,13 +26,7 @@ export class CreateService extends AbstractService {
     });
   }
   
-  createOnSql(): void {
-    this._httpClient.post('', {}).subscribe(res => {
-      this._sqlObj$.next(res);
-    });
-  }
-  
-  private generateRandomInt(max: number): number {
+  private static generateRandomInt(max: number): number {
     return Math.floor(Math.random() * max);
   }
 }

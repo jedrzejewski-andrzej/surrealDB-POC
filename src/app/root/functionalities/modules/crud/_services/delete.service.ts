@@ -20,10 +20,4 @@ export class DeleteService extends AbstractService {
       this._surrealObj$.next(res)
     });
   }
-  
-  deleteOnSql(): void {
-    this._httpClient.delete('').subscribe(res => {
-      this._sqlObj$.next(res)
-    });
-  }
 }

@@ -18,6 +18,10 @@ const routes: Routes = [
         loadChildren: () => import('./modules/transactions/transactions.module').then(m => m.TransactionsModule),
       },
       {
+        path: 'auth',
+        loadChildren: () => import('./modules/auth/auth.module').then(m => m.AuthModule),
+      },
+      {
         path: '**',
         redirectTo: 'crud',
       }

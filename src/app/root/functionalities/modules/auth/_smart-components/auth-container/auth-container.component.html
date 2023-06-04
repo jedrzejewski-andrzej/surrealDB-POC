@@ -1,0 +1,28 @@
+<div class="container">
+  <h1>Create action</h1>
+  <br/>
+  <div class="response__json">
+    <h5>Request body:</h5>
+    <pre>
+{{"{"}}
+  "NS": "test",
+  "DB": "test",
+  "SC": "allusers",
+  "id": "test@aceeme.com",
+  "pass": "somepassword"
+{{"}"}}
+    </pre>
+  </div>
+  <div class="response__container">
+    <div class="response">
+      <h3>SurrealDB - SignIn</h3>
+      <button (click)="signIn()">FireAway</button>
+      <app-terminal-item [text]="(signInResponse$ | async) || (signInError$ | async)"></app-terminal-item>
+    </div>
+    <div class="response">
+      <h3>SurrealDB - SignUp</h3>
+      <button (click)="signUp()">FireAway</button>
+      <app-terminal-item [text]="(signUpResponse$ | async) || (signUpError$ | async)"></app-terminal-item>
+    </div>
+  </div>
+</div>

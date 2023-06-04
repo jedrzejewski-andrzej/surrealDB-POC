@@ -3,11 +3,8 @@
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-}
-
-body {
-    background-color: #1a202d;
     color: white;
+    background-color: #1a202d;
 }
 
 .mat-mdc-simple-snack-bar {
@@ -15,5 +12,9 @@ body {
 }
 
 .mat-mdc-snack-bar-container .mdc-snackbar__surface {
+    background-color: #272e3c !important;
+}
+
+.mat-mdc-snack-bar-label .mdc-snackbar__label {
     background-color: #272e3c !important;
 }

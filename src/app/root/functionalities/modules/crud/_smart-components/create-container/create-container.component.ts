@@ -9,13 +9,11 @@ import {Observable} from 'rxjs';
 })
 export class CreateContainerComponent implements OnInit, OnDestroy {
   surrealObj$: Observable<any>;
-  sqlObj$: Observable<any>;
   
   constructor(private _createService: CreateService) {}
   
   ngOnInit() {
     this.surrealObj$ = this._createService.surrealObj$;
-    this.sqlObj$ = this._createService.sqlObj$;
   }
   
   createOnSurreal(): void {

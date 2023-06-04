@@ -10,7 +10,6 @@ import {FormControl} from '@angular/forms';
 })
 export class DeleteContainerComponent implements OnInit, OnDestroy {
   surrealObj$: Observable<any>;
-  sqlObj$: Observable<any>;
   
   idControl = new FormControl(6);
   
@@ -18,15 +17,10 @@ export class DeleteContainerComponent implements OnInit, OnDestroy {
   
   ngOnInit() {
     this.surrealObj$ = this._deleteService._surrealObj$;
-    this.sqlObj$ = this._deleteService.sqlObj$;
   }
   
   deleteOnSurreal(): void {
     this._deleteService.deleteOnSurreal(this.idControl.value || 6);
-  }
-  
-  deleteOnSql(): void {
-    this._deleteService.deleteOnSql();
   }
   
   ngOnDestroy() {

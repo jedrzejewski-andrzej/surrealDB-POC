@@ -24,10 +24,4 @@ export class UpdateService extends AbstractService {
       this._surrealObj$.next(res);
     });
   }
-  
-  updateOnSql(): void {
-    this._httpClient.patch('', {}).subscribe(res => {
-      this._sqlObj$.next(res);
-    });
-  }
 }

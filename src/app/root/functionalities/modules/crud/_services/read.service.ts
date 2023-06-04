@@ -36,10 +36,4 @@ export class ReadService extends AbstractService {
       this._surrealObjSingle$.next(res);
     });
   }
-  
-  readOnSql(): void {
-    this._httpClient.get('').subscribe(res => {
-      this._sqlObj$.next(res);
-    });
-  }
 }
