@@ -53,13 +53,27 @@
       font-size: 14px;
       margin-bottom: 16px;
 
-      &:hover {
+      &:hover:not(.disabled){
+        cursor: pointer;
         transform: scale(1.06);
         color: var(--text-color);
         --generate-button-shadow-inset: rgba(255,255,255,0.7);
         background: linear-gradient(-60deg,#8700ff,#ff009e);
         box-shadow: 0 0 30px rgba(255,0,158,.5),0 4px 12px rgba(0,0,0,.05),0 0 0 4px rgba(150,0,255,.3),inset 0 1px 1px var(--generate-button-shadow-inset, rgba(255,255,255,.1)),0 0 0 var(--generate-button-shadow-outline, 0) rgba(109,68,244,.4);
       }
+    }
+  }
+
+  .d-flex {
+    display: flex;
+    align-items: baseline;
+
+    label {
+      margin-left: 16px;
+    }
+
+    input {
+      margin-left: 4px;
     }
   }
 }

@@ -16,8 +16,10 @@ export class CreateContainerComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.surrealObj$ = this._createService.surrealObj$;
     this.sqlObj$ = this._createService.sqlObj$;
+  }
+  
+  createOnSurreal(): void {
     this._createService.createOnSurreal();
-    this._createService.createOnSql();
   }
   
   ngOnDestroy() {

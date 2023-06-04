@@ -5,15 +5,15 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: '/crud/create',
+    redirectTo: '/functionalities',
   },
   {
-    path: 'crud',
-    loadChildren: () => import('./root/crud/crud.module').then(m => m.CrudModule),
+    path: 'functionalities',
+    loadChildren: () => import('./root/functionalities/functionalities.module').then(m => m.FunctionalitiesModule),
   },
   {
     path: '**',
-    redirectTo: '/crud/create',
+    redirectTo: '/functionalities',
   }
 ];
 

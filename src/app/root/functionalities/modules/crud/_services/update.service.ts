@@ -8,8 +8,19 @@ export class UpdateService extends AbstractService {
     super();
   }
 
-  updateOnSurreal(): void {
-    this._httpClient.patch('', {}).subscribe(res => {
+  updateOnSurreal(id: number): void {
+    const user = {
+      email: `updatedTest${id}@example.pl`,
+      name: `SurrealDB-${id}`,
+    }
+    this._httpClient.patch(`http://localhost:8000/key/users/${id}`, JSON.stringify(user), {
+      headers: {
+        NS: 'test',
+        DB: 'test',
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }
+    }).subscribe(res => {
       this._surrealObj$.next(res);
     });
   }

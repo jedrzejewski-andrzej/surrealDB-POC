@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Read action</h1>
+  <br/>
+  <div class="response__container">
+    <div class="response">
+      <h3>SurrealDB - GetAll</h3>
+      <button (click)="readOnSurrealAll()">FireAway</button>
+      <app-terminal-item [text]="surrealObj$ | async"></app-terminal-item>
+    </div>
+    <div class="response">
+      <h3>SurrealDB - GetSingle</h3>
+      <div class="d-flex">
+        <button (click)="readOnSurrealSingle()">FireAway</button>
+        <label for="idControl">Podaj ID (domyślnie 6):</label>
+        <input id="idControl" type="text" [formControl]="idControl">
+      </div>
+      <app-terminal-item [text]="surrealObjSingle$ | async"></app-terminal-item>
+    </div>
+  </div>
+</div>

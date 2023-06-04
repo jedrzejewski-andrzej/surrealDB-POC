@@ -8,8 +8,15 @@ export class DeleteService extends AbstractService {
     super()
   }
   
-  deleteOnSurreal(): void {
-    this._httpClient.delete('').subscribe(res => {
+  deleteOnSurreal(id: number): void {
+    this._httpClient.delete(`http://localhost:8000/key/users/${id}`, {
+      headers: {
+        NS: 'test',
+        DB: 'test',
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }
+    }).subscribe(res => {
       this._surrealObj$.next(res)
     });
   }
