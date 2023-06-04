@@ -19,6 +19,21 @@ header {
   }
 }
 
+a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #ff009e;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  img {
+    height: 16px;
+  }
+}
+
 .content {
   display: flex;
   align-items: center;

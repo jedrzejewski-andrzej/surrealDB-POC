@@ -5,11 +5,7 @@
     <h5>Request body:</h5>
     <pre>{{"{"}}
   "name": "SurrealDB-{{"{"}}randomNumber{{"}"}}",
-  "email": "test{{"{"}}randomNumber{{"}"}}$@example.pl",
-  "role": {{"{"}}
-    "id": 1,
-    "name": "normal",
-  {{"}"}},
+  "email": "test{{"{"}}randomNumber{{"}"}}$@example.pl"
 {{"}"}}
     </pre>
   </div>
@@ -22,11 +18,6 @@
         <input id="idControl" type="text" [formControl]="idControl">
       </div>
       <app-terminal-item [text]="surrealObj$ | async"></app-terminal-item>
-    </div>
-    <div class="response">
-      <h3>SQL</h3>
-      <button class="disabled">Disabled</button>
-      <app-terminal-item [text]="'Not ready yet'"></app-terminal-item>
     </div>
   </div>
 </div>

@@ -1,3 +1,8 @@
+:host {
+  width: 100%;
+  display: block;
+}
+
 .terminal {
   position: relative;
   border-radius: 16px;
@@ -29,4 +34,5 @@
   margin: 0;
   background-color: unset;
   text-align: left;
+  white-space: pre-wrap;
 }

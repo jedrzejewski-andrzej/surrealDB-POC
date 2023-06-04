@@ -8,6 +8,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class TransactionsContainerComponent {
   sessionA: string[] = [
+    'BEGIN TRANSACTION;',
     'SELECT * FROM users;',
     'UPDATE users:2 SET balance+=300;',
     'CANCEL TRANSACTION;',
